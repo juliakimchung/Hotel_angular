@@ -7,11 +7,11 @@
 		</div>
 		<div class="RoomDetail">	
 		<strong><p id ="name">((room.name))</p></strong><br>
-		<span>((room.size))</span><br>
-		<span>((room.description))</span><br>
-		<span>((room.amenity))</span><br>
-		<span>((room.price))</span><br>
-		<button class="reserveBtn"><a class="reserveBtn" ng-click="reserve(room.id)">Reserve</a></button>
+		<span>Size: ((room.size))</span><br>
+		<span>Desciption:((room.description))</span><br><br>
+		<span>Amenity:((room.amenity))</span><br><br>
+		<span>Price:((room.price))</span><br><br><br>
+		<button class="reserveBtn"><a ng-href= "/#!/reserve/" class="reserveBtn" ng-click="reserve()">Reserve</a></button>
 
 		</div>
 

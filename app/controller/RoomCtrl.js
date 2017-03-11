@@ -16,7 +16,6 @@ app.controller("RoomCtrl",
 				.then((items) => {
 					console.log("items from RoomCtrl", items);
 					$scope.rooms = items.data.results;
-
 				});
 			});
 

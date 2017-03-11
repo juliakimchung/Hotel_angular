@@ -19,6 +19,10 @@ angular.module('My_HotelApp').config(
 				.when('/room', {
 					controller: "RoomCtrl",
 					templateUrl: "partials/room.html"
+				})
+				.when('/reserve', {
+					controller: "ReserveCtrl",
+					templateUrl: 'partials/reserve.html'
 				});
 		}
 
@@ -27,3 +31,18 @@ angular.module('My_HotelApp').config(
 
 
 	]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
