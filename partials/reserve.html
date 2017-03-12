@@ -1,25 +1,53 @@
 <div class="text-center container container-fluid">
   <div class="head">
 
-    <form class="calendar">
-      <div class='col-sm-6'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
-                        <span class="glyphicon glyphicon-calendar"></span>
-                    </span>
-                </div>
-            </div>
+
+  <div class="form-group">
+    <h2 class="heading">Details</h2>
+    <div class="grid">
+    <div class="col-1-4 col-1-4-sm">
+      <div class="controls">
+        <input type="date" id="arrive" class="floatLabel" name="arrive" value="<?php echo date('Y-m-d'); ?>">
+        <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label>
+      </div>      
+    </div>
+    <div class="col-1-4 col-1-4-sm">
+      <div class="controls">
+        <input type="date" id="depart" class="floatLabel" name="depart" value="<?php echo date('Y-m-d'); ?>" />
+        <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label>
+      </div>      
+    </div>
+      </div>
+
+  <!-- <form name="myForm" flex-gt-xs>
+    <div layout-gt-xs="row pickDatesContainer">
+      <div flex-gt-xs="">
+        <span> <h4 class="pickDates title required">When would you like to check in?</h4></span>
+        
+        <md-datepicker name="dateField" ng-model="getDates.check_in_date" md-placeholder="Check_In_Date" class="checkInDate" md-min-date="minStartDate" ng-required="true"></md-datepicker>
+        <md-datepicker name="dateField" ng-model="getDates.check_out_date" md-placeholder="Check_Out_Date" class="pickDates" md-min-date="minEndDate" ng-click="setDates()" ng-required="true"></md-datepicker>
+        <div class="validation-messages" ng-messages="myForm.dateField.$error">
+          <div ng-message="valid">The entered value is not a date!</div>
+          <div ng-message="required">Both dates are required!</div>
+          <div ng-message="mindate">Minimum Stay required</div>
         </div>
-        <br>
-        <div class="selectRoom">
+      </div>
+    </div>
+  </form> -->
+    <!-- <form name='form' ng-submit=submit()>
+   
+      <input type="text" class="checkin"  ng-model="reservation.check_in_date" id="check_in_date" placeholder="Check_In_Date" ng-required='true'>
+      <input type="text" class="checkout"  ng-model="reservation.check_out_date" id="check_out_date" placeholder="Check_Out_Date" ng-required='true'>
+    </form>
+    -->
+      <div class="selectRoom">
+
         <select>
           <option value="room.pk" ng-repeat="room in  rooms"  ng-model="reservation.room">((room.name)) $((room.price))   per night
           </option>
         </select>
       </div>
-    </form>
+    
     <form>
       <article class="col-md-12 box " ng-repeat="room in  rooms"> 
           
@@ -35,3 +63,4 @@
     </form>
   </div>
 </div>
+  

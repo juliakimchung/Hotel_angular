@@ -1,3 +1,6 @@
+.body {
+  background-color: #FFF3DC; }
+
 .RoomPic {
   margin-top: 150px;
   height: 550px;
@@ -23,13 +26,28 @@
 
 .login-background {
   background: url(images/blue-hotel4.jpg) no-repeat;
-  margin-left: 50px;
-  height: 4000px;
-  width: 5000px; }
+  width: 1500px;
+  height: 1200px;
+  margin: 200px; }
+
+.payment-background {
+  background: url(images/blue-hotel3.jpg) no-repeat;
+  width: 1800px;
+  height: 1600px;
+  margin: 100px; }
 
 .login {
   margin-left: 500px;
-  width: 500px;
-  color: white; }
+  margin-top: 350px; }
+
+.payment {
+  margin-left: 500px;
+  margin-top: 120px; }
+
+.selectRoom {
+  margin-top: 120px; }
+
+.head {
+  margin-top: 120px; }
 
 /*# sourceMappingURL=main.css.map */

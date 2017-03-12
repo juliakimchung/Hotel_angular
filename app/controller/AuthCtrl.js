@@ -10,12 +10,16 @@ function($scope, $http, $location, RootFactory){
 
 	$scope.user = {
 		username: "",
-		password: ""
+		password: "",
+		email: '',
+		first_name: '',
+		last_name: ''
 	};
+
 
 	$scope.register = function(){
 		$http({
-			url: "http://localhost:8000/user/",
+			url: "http://localhost:8000/register/",
 			method: "POST",
 			headers: {
 				"Content-Type": "application/x-www-form-form-unlencoded"
