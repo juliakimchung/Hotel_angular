@@ -1,6 +1,6 @@
 "use strict";
 
-let app = angular.module("My_HotelApp", ['ngRoute', 'ngTouch', 'ngAnimate'])
+let app = angular.module("My_HotelApp", ['ngRoute', 'ngTouch', 'ngAnimate', 'ngMaterial'])
 					.constant('apiUrl', 'http://localhost:8000/');
 
 angular.module('My_HotelApp').config(
