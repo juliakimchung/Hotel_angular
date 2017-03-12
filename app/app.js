@@ -1,6 +1,6 @@
 "use strict";
 
-let app = angular.module("My_HotelApp", ['ngRoute', 'ngTouch', 'ngAnimate'])
+let app = angular.module("My_HotelApp", ['ngRoute',  'ngAnimate', 'ngMaterial','ngMessages'])
 					.constant('apiUrl', 'http://localhost:8000/');
 
 angular.module('My_HotelApp').config(
@@ -12,9 +12,14 @@ angular.module('My_HotelApp').config(
 			$interpolateProvider.endSymbol('))');
 
 			$routeProvider
+
 				.when('/login', {
 					controller: "AuthCtrl",
 					templateUrl: 'partials/login.html'
+				})
+				.when('/register', {
+					controller: "AuthCtrl",
+					templateUrl: 'partials/register.html'
 				})
 				.when('/room', {
 					controller: "RoomCtrl",
@@ -28,11 +33,11 @@ angular.module('My_HotelApp').config(
 					controller: "PaymentCtrl",
 					templateUrl: 'partials/payment.html'
 				})
-				.when('reservation_detail', {
+				.when('/reservation_detail', {
 					controller: "ReserveDetailCtrl",
-					templateUrl: 'partials/reservationDetail.html'
+					templateUrl: 'partials/confirm.html'
 				})
-				.when('home', {
+				.when('/home', {
 					controller: "HomeCtrl",
 					templateUrl: 'partials/home.html'
 				});
