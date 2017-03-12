@@ -1,7 +1,7 @@
 "use strict";
 app.controller("PaymentCtrl", 
 
-	function($http, RootFactory, $location, $scope, $routeParams, $timeout){
+	function($http, RootFactory, $location, $scope, $sce, $routeParams, $timeout){
 		$scope.payment = {
 			name: "",
 			account_number: "",
@@ -9,21 +9,22 @@ app.controller("PaymentCtrl",
 			expiration_day: ""
 		};
 
-		RootFactory.getApiRoot()
-		.then((rootes)=>{
-				$http({
-					url: `${rootes.payment_type}`,
-					method: 'POST',
-					headers: {
-						'Authorization': `Token ${RootFactory.getToken()}`
-					}
-				})
-				.then((items) => {
-					console.log("items from PaymentCtrl", items);
-					$location.url("/ReservationDetail");
-					$timeout();
+		$scope.addNewPaymentType=()=>{
+			RootFactory.getApiRoot()
+			.then((rootes)=>{
+					$http({
+						url:(`${rootes.payment_type}`, $scope.payment),
+						method: 'POST',
+						headers: {
+							'Authorization': `Token ${RootFactory.getToken()}`
+						}
+					})
+					.then((items) => {
+						console.log("items from PaymentCtrl", items);
+						$location.url("/ReservationDetail");
+						$timeout();
 
-				});
+					});
 			});
-
-	})
+		};
+	});

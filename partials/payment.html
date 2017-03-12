@@ -1,0 +1,33 @@
+<form class="form-horizontal payment_form">
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Payment Type Name</label>
+    <div class="col-sm-10">
+     <select>
+          <option value="payment.pk" ng-repeat="payment in  payment"  ng-model="payment.name">((payment.name)) 
+          </option>
+    </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Account Number</label>
+    <div class="col-sm-10">
+      <input type="name" class="form-control"  placeholder="account_number" ng-model = "payment.account_number">
+    </div>
+  </div><div class="form-group">
+    <label for="name" class="col-sm-2 control-label">CVV</label>
+    <div class="col-sm-10">
+      <input type="name" class="form-control"  placeholder="cvv_number" ng-model = "payment.cvv_number">
+    </div>
+  </div><div class="form-group">
+    <label for="name" class="col-sm-2 control-label">Expiration Date</label>
+    <div class="col-sm-10">
+      <input type="name" class="form-control"  placeholder="expiration_date" ng-model = "payment.expiration_date">
+    </div>
+  </div>
+ 
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button type="submit" class="btn btn-default" ng-click="reserve()">Submit</button>
+    </div>
+  </div>
+</form>

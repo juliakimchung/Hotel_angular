@@ -38,13 +38,11 @@ app.controller("ReserveCtrl",
 
 						console.log("item from ReserveCtrl", item);
 						
-						$location.url("/payment");
+						$location.url("/payment_type");
 						$timeout();
 
 		
-            // $(function () {
-            //     $('#datetimepicker1').datetimepicker();
-            // });
+            
    			});     
 
 		});
