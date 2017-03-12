@@ -3,6 +3,7 @@
 <head>
  <title>My_Hotel</title>
  <link rel="stylesheet" type="text/css" href="lib/bower_components/bootstrap/dist/css/bootstrap.min.css">
+ <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
  <link rel="stylesheet" type="text/css" href="css/main.css">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
@@ -12,11 +13,16 @@
 <div ng-view></div>
 <div ng-include="'partials/Footer.html'"></div>
 
+
   <script type="text/javascript" src="lib/bower_components/jquery/dist/jquery.min.js"></script>
   <script type="text/javascript" src="lib/bower_components/bootstrap/dist/js/bootstrap.min.js">
   </script>
+  <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script><script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.css"></script>
   <script type="text/javascript" src="lib/bower_components/angular/angular.min.js"></script>
+  <script type="text/javascript" src="lib/bower_components/angular-animate/angular-animate.min.js"></script>
+  <script type="text/javascript" src="lib/bower_components/angular-touch/angular-touch.min.js"></script>
   <script type="text/javascript" src="lib/bower_components/angular-route/angular-route.min.js"></script>
+  <script type="text/javascript" src="lib/bower_components/gsap/src/minified/TweenMax.min.js"></script>
 
   <script type="text/javascript" src="app/app.js"></script>
 
@@ -28,6 +34,8 @@
   <script type="text/javascript" src="app/controller/AuthCtrl.js"></script>
   <script type="text/javascript" src="app/controller/FooterCtrl.js"></script>
   <script type="text/javascript" src="app/controller/ReserveCtrl.js"></script>
+  <script type="text/javascript" src="app/controller/ReserveDetailCtrl.js"></script>
+  <script type="text/javascript" src="app/controller/PaymentCtrl.js"></script>
 
 
 </body>

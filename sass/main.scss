@@ -4,15 +4,49 @@ $primary-color: #333;
 
 
 .RoomPic {
-	margin-top: 100px;
+	margin-top: 150px;
 	
-	height: 600px;
-	width: 600px;
+	height: 550px;
+	width: 750px;
 	border-radius: 3px;
 	
 
 }
 .RoomDetail {
-	height:600px;
-	width:600px;
+	height:400px;
+	width:700px;
 }
+
+.login {
+	margin-top: 100px;
+}
+
+.calendar {
+	margin-top: 100px;
+}
+
+.payment_form {
+	margin-top: 100px;
+}
+
+.nav {
+	background-color: #00087f;
+	height: 80px;
+}
+
+.login-background {
+	background: url(images/blue-hotel4.jpg)
+	no-repeat;
+	margin-left: 50px;
+	height: 4000px;
+	width: 5000px;
+	
+
+}
+
+.login {
+	margin-left: 500px;
+	width: 500px;
+	color: white;
+}
+

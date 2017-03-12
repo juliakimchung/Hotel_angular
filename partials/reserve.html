@@ -1,0 +1,37 @@
+<div class="text-center container container-fluid">
+  <div class="head">
+
+    <form class="calendar">
+      <div class='col-sm-6'>
+            <div class="form-group">
+                <div class='input-group date' id='datetimepicker1'>
+                    <input type='text' class="form-control" />
+                    <span class="input-group-addon">
+                        <span class="glyphicon glyphicon-calendar"></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br>
+        <div class="selectRoom">
+        <select>
+          <option value="room.pk" ng-repeat="room in  rooms"  ng-model="reservation.room">((room.name)) $((room.price))   per night
+          </option>
+        </select>
+      </div>
+    </form>
+    <form>
+      <article class="col-md-12 box " ng-repeat="room in  rooms"> 
+          
+            
+            <img class="RoomPic" ng-src='((room.image))'>
+            <strong><p>((room.name))</p></strong> 
+
+            
+          <button class="submitBtn"><a ng-href= "/#!/payment_type/" class="submitBtn" ng-click="addNewPaymentType()">Make a reservation</a>
+          </button>
+      </article> 
+    
+    </form>
+  </div>
+</div>
