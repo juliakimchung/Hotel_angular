@@ -5,6 +5,7 @@ app.controller('AuthCtrl', [
 		'$http',
 		'$location',
 		'RootFactory',
+		
 function($scope, $http, $location, RootFactory){
 
 
@@ -58,6 +59,9 @@ function($scope, $http, $location, RootFactory){
 				}
 			});
 	};
+
+	
 }
+
 
 ]);

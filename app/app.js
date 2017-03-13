@@ -3,6 +3,8 @@
 let app = angular.module("My_HotelApp", ['ngRoute',  'ngAnimate', 'ngMaterial','ngMessages'])
 					.constant('apiUrl', 'http://localhost:8000/');
 
+
+
 angular.module('My_HotelApp').config(
 	[
 		"$interpolateProvider",
@@ -33,14 +35,19 @@ angular.module('My_HotelApp').config(
 					controller: "PaymentCtrl",
 					templateUrl: 'partials/payment.html'
 				})
-				.when('/reservation_detail', {
-					controller: "ReserveDetailCtrl",
-					templateUrl: 'partials/confirm.html'
-				})
+				// .when('/reservation_detail', {
+				// 	controller: "ReserveDetailCtrl",
+				// 	templateUrl: 'partials/confirm.html'
+				// })
 				.when('/home', {
-					controller: "HomeCtrl",
+					controller: "TestCtrl",
 					templateUrl: 'partials/home.html'
+				})
+				.when('landing', {
+					controller: "LandingCtrl",
+					templateUrl: 'partials/landing.html'
 				});
+
 
 		}
 

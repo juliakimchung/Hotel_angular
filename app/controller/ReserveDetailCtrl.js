@@ -1,35 +1,25 @@
 "use strict";
 app.controller("ReserveDetailCtrl", 
 
-	function($http, RootFactory, $location, $scope, $routeParams, $timeout){
-		$scope.reservation = {
-			check_in_date: "",
-			check_out_date: "",
-			room: "",
-			payment_type: ""
+	function($http, RootFactory, $location, $scope, $routeParams){
+		$scope.room = {};
+		$scope.checkRoom = ()=> {
+		RootFactory.getApiRoot()
+		.then((rootes)=>{
+				$http({
+					url: (`${rootes.room}`, $routeParams.roomId),
+					method: 'GET',
+					headers: {
+						'Authorization': `Token ${RootFactory.getToken()}`
+					}
+				})
+				.then((item) => {
+					console.log("$routeParams.room.pk from ReserveDetailCtrl", $routeParams.room.pk);
+					console.log("room from ReserveDetailCtrl", item);
+					$scope.room = item.data.results;
+					$location.url('/reserve');
+				});
+			});
 		};
+	});
 
-		$scope.reserve = () => {
-			RootFactory.getApiRoot()
-			.then((rootes)=>{
-					$http({
-						url: (`${rootes.reservation}`, $scope.reservation),
-						method: 'POST',
-						headers: {
-							'Authorization': `Token ${RootFactory.getToken()}`
-						}
-					})
-					.then((item) => {
-
-						console.log("item from ReserveCtrl", item);
-						
-						$location.url("/room");
-						$timeout();
-
-		
-            
-   			});     
-
-		});
-	};
-});

@@ -1,0 +1,30 @@
+
+
+<body>
+ <button id="show-dialog" type="button" class="mdl-button">Show Confirmation Box</button>
+  <dialog class="mdl-dialog">
+    <h4 class="mdl-dialog__title">Confirm</h4>
+    <div class="mdl-dialog__content">
+      <p>
+        If You delete your messages it can't be undone. Please Confirm to Proceed?
+      </p>
+    </div>
+    <div class="mdl-dialog__actions">
+    <button type="button" class="mdl-button" >Confirm</button>
+      <button type="button" class="mdl-button close">Cancel</button>
+    </div>
+  </dialog>
+  <script>
+    var dialog = document.querySelector('dialog');
+    var showDialogButton = document.querySelector('#show-dialog');
+    if (! dialog.showModal) {
+      dialogPolyfill.registerDialog(dialog);
+    }
+    showDialogButton.addEventListener('click', function() {
+      dialog.showModal();
+    });
+    dialog.querySelector('.close').addEventListener('click', function() {
+      dialog.close();
+    });
+  </script>
+</body>
