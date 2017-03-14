@@ -11,8 +11,7 @@ app.controller("ReserveCtrl",
 			guest: 1
 		};
     
-
-    
+		
 
     RootFactory.getApiRoot()
 		.then((rootes)=>{
@@ -81,7 +80,7 @@ app.controller("ReserveCtrl",
 						})
 						.then((data)=> {
 							console.log("data from addNewReservation", data );
-							$location.url("/reservation_detail");
+							$location.url(`/reservation_detail/${data.results.id}`);
 						});
 					});
 			});

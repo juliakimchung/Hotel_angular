@@ -32,7 +32,7 @@ angular.module('My_HotelApp').config(
 					templateUrl: 'partials/reserve.html'
 				})
 				
-				.when('/reservation_detail', {
+				.when('/reservation_detail/:reservationId', {
 					controller: "ResDetailCtrl",
 					templateUrl: 'partials/reservationDetail.html'
 				})
