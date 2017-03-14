@@ -3,11 +3,8 @@ app.controller("ResDetailCtrl",
 
 	function($http, RootFactory, $location, $scope, $timeout, $routeParams){
 		$scope.reservations = [];
-		$scope.guests = [];
 		$scope.rooms = [];
-		$scope.current_room = [];
-		$scope.current_guest = [];
-
+		$scope.payment = [];
 		RootFactory.getApiRoot()
 		.then((rootes)=>{
 				$http({
@@ -29,9 +26,19 @@ app.controller("ResDetailCtrl",
 					})
 					.then((rooms)=> {
 						$scope.rooms = rooms.data;
-
 						console.log("rooms from ResDetailCtrl", rooms );
-						
+						$http({
+							url: `${rootes.payment_type}${$scope.reservations.payment}/`,
+							method:"GET",
+							headers: {
+								'Authorization': `Token ${RootFactory.getToken()}`
+							}
+						})
+						.then((payment)=>{
+							$scope.payment = payment.data;
+
+							console.log("payment from ResDetailCtrl", payment );
+						});
 					});
 				});
 
