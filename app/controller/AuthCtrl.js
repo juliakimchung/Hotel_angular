@@ -35,10 +35,10 @@ function($scope, $http, $location, RootFactory){
 				'email': $scope.user.email,
 				'first_name': $scope.user.first_name,
 				'last_name': $scope.user.last_name,
-				'street_address': "111 West End",
-				"city": "Nashville",
-				"zipcode": "12345",
-				"state": "TN"
+				'street_address': $scope.user.street_address,
+				"city": $scope.user.city,
+				"zipcode": $scope.user.zipcode,
+				"state": $scope.user.state
 			}
 		})
 		.then(res => {
@@ -53,8 +53,8 @@ function($scope, $http, $location, RootFactory){
 			url: "http://localhost:8000/api-token-auth/",
 			method: "POST",
 			data: {
-				'username': "jj",
-				'password': "jj123456"
+				'username': $scope.user.username,
+				'password': $scope.user.password
 			}
 		})
 		.then(

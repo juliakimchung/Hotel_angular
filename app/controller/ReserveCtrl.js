@@ -79,8 +79,8 @@ app.controller("ReserveCtrl",
 								}
 						})
 						.then((data)=> {
-							console.log("data from addNewReservation", data );
-							$location.url(`/reservation_detail/${data.results.id}`);
+							console.log("data from addNewReservation", data.data.id );
+							$location.url(`/reservation_detail/${data.data.id}`);
 						});
 					});
 			});
