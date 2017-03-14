@@ -5,12 +5,16 @@ app.controller("ReserveCtrl",
 		$scope.getDates = {
 			check_in_date: "",
 			check_out_date: "",
-			// room: "",
-			// payment_type: ""
+			completed: 0,
+			room: "",
+			payment:"",
+			guest: 1
 		};
+    
 
-                        
-		RootFactory.getApiRoot()
+    
+
+    RootFactory.getApiRoot()
 		.then((rootes)=>{
 				$http({
 					url: `${rootes.room}`,
@@ -23,32 +27,67 @@ app.controller("ReserveCtrl",
 					console.log("items from RoomCtrl", items);
 					$scope.rooms = items.data.results;
 				});
-			});
+			});               
 
-		$scope.setDates = () => {
+    
+	$scope.payment_type = {
+			name: "",
+			account_number: "",
+			ccv_number: "",
+			expiration_date: ""
+		};
+
+		$scope.addNewPaymentType=()=>{
 			RootFactory.getApiRoot()
 			.then((rootes)=>{
 					$http({
-						url: (`${rootes.reservation}`, $scope.getDates),
+						url:`${rootes.payment_type}`,
 						method: 'POST',
 						headers: {
 							'Authorization': `Token ${RootFactory.getToken()}`
 						}
 					})
-					.then((item) => {
-
-						console.log("item from ReserveCtrl", item);
-						
-						$location.url("/payment_type");
+					.then((items) => {
+						console.log("items from PaymentCtrl", items);
+						$scope.payment_type = items.data;
 						$timeout();
 
-		
-            
-   			});     
+					});
+			});
+		};
 
-		});
-	};
+		$scope.addNewReservation =()=>{
+			RootFactory.getApiRoot()
+			.then((rootes)=>{
+					$http({
+						url:`${rootes.payment_type}`,
+						method: 'POST',
+						data: $scope.payment_type,
+						headers: {
+							'Authorization': `Token ${RootFactory.getToken()}`
+						}
+					})
+					.then((paymentType) =>{
+						console.log("paymenttype from addNewReservation", paymentType);
+						$scope.getDates.payment= paymentType.data.id;
+						console.log("$scope.getDates.payment_type", $scope.getDates.payment_type );
+						$http({
+							url:`${rootes.reservation}`,
+							method: 'POST',
+							data: $scope.getDates,
+							headers: {
+									'Authorization': `Token ${RootFactory.getToken()}`
+								}
+						})
+						.then((data)=> {
+							console.log("data from addNewReservation", data );
+							$location.url("/reservation_detail");
+						});
+					});
+			});
+		};
 });
+
 
 // app.directive('reserve',['$timeout', function ($timeout) {
 // return {

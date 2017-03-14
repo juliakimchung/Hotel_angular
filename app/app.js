@@ -31,14 +31,11 @@ angular.module('My_HotelApp').config(
 					controller: "ReserveCtrl",
 					templateUrl: 'partials/reserve.html'
 				})
-				.when('/payment_type', {
-					controller: "PaymentCtrl",
-					templateUrl: 'partials/payment.html'
+				
+				.when('/reservation_detail', {
+					controller: "ResDetailCtrl",
+					templateUrl: 'partials/reservationDetail.html'
 				})
-				// .when('/reservation_detail', {
-				// 	controller: "ReserveDetailCtrl",
-				// 	templateUrl: 'partials/confirm.html'
-				// })
 				.when('/home', {
 					controller: "TestCtrl",
 					templateUrl: 'partials/home.html'
@@ -50,12 +47,7 @@ angular.module('My_HotelApp').config(
 
 
 		}
-
-
-
-
-
-	]);
+]);
 
 
 
