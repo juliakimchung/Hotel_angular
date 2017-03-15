@@ -3,21 +3,30 @@
 
 
   <div class="form-group">
-    <h2 class="heading">Details</h2>
+    <h2 class="heading">Check Dates</h2>
+  <fieldset>
     <div class="grid">
-    <div class="col-1-4 col-1-4-sm">
+    <div class="fa-select-date">
       <div class="controls">
+
         <input type="date" id="arrive" class="floatLabel"  data-date-format='yy-mm-dd' name="arrive" ng-model='getDates.check_in_date'>
-        <label for="arrive" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Arrive</label>
+        <label for="arrive" class="label-date" for=" Arrive">
+        <!-- <i class="fa fa-calendar"></i>&nbsp;&nbsp; --><!-- Arrive --></label>
       </div>      
     </div>
-    <div class="col-1-4 col-1-4-sm">
+    <div class="fa-select-date">
       <div class="controls">
         <input type="date" id="depart" class="floatLabel"  data-date-format='yy-mm-dd' name="depart"  ng-model='getDates.check_out_date'/>
-        <label for="depart" class="label-date"><i class="fa fa-calendar"></i>&nbsp;&nbsp;Depart</label>
+        <label for="depart" class="label-date"><!-- <i class="fa fa-calendar"></i>&nbsp;&nbsp; --><!-- Depart --></label>
       </div>      
     </div>
-  </div>
+    </div>
+ 
+    <input type="text"  ng-model=getNumberOfDays()>
+
+
+  </fieldset>
+  
 
  <!--  <form name="myForm" flex-gt-xs>
     <div layout-gt-xs="row pickDatesContainer">
@@ -47,7 +56,7 @@
           </option>
         </select>
 
-      </div>
+       
        <a ng-click= "showPayment=true" class="makeAReservation">Make a reservation</a>
 
       <div class="mdl-grid " ng-show = "showPayment">
@@ -85,40 +94,4 @@
 
 
   
-  </div>
-  </div>
-</div>
-
-    
-   <!--  <form>
-      <article class="col-md-12 box " ng-repeat="room in  rooms"> 
-          
-            
-            <img class="RoomPic" ng-src='((room.image))'>
-            <strong><p>((room.name))</p></strong> 
-
-            
-          <a ng-href= "/#!/payment_type/" class="submitBtn">Make a reservation</a>
-          
-      </article> 
-    
-    </form>
-  </div>
-</div> -->
-
- <!-- <carousel interval="myInterval">
-  <slide ng-repeat="room in rooms" active="rooms.active">
-    <div class="" style="width:600px;margin:auto;">
-    <div >
-    <img ng-src="((room.image)))" width="200px" style="float:left;">
-    </div>
-    <div >
-    <img ng-src="((room[getSecondIndex($index+1)].image))" width="200px" style="float:left;" >
-    </div>
-     <div >
-    <img ng-src="((room[getSecondIndex($index+2)].image))" width="200px" style="float:left;" >
-    </div>
-    </div>
-  </slide>
-</carousel>
- -->
+ 

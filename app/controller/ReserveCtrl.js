@@ -8,10 +8,17 @@ app.controller("ReserveCtrl",
 			completed: 0,
 			room: "",
 			payment:"",
-			guest: 1
+			guest: 1,
+			total:""
 		};
     
-		
+	let oneDay = 86400000;
+
+  $scope.getNumberOfDays = ()=> {
+    let difference = $scope.getDates.check_out_date - $scope.getDates.check_in_date;
+    return (Math.round(difference/oneDay));
+  };
+
 
     RootFactory.getApiRoot()
 		.then((rootes)=>{
@@ -69,7 +76,7 @@ app.controller("ReserveCtrl",
 					.then((paymentType) =>{
 						console.log("paymenttype from addNewReservation", paymentType);
 						$scope.getDates.payment= paymentType.data.id;
-						console.log("$scope.getDates.payment_type", $scope.getDates.payment_type );
+						console.log("$scope.getDates.payment_type", $scope.getDates.payment );
 						$http({
 							url:`${rootes.reservation}`,
 							method: 'POST',
@@ -85,66 +92,9 @@ app.controller("ReserveCtrl",
 					});
 			});
 		};
+
+
+		
 });
-
-
-// app.directive('reserve',['$timeout', function ($timeout) {
-// return {
-//     restrict: 'E',
-//     templateUrl: 'reserve.html',
-//     replace: true,
-//     scope: {
-//       checkIn:'=',
-//       checkOut:'='
-//     },
-//     link: function (scope, element, attrs, ngModelCtrl) {
-        
-//        $("#check_in_date").datepicker({
-//             dateFormat: 'dd/mm/yy',
-//             minDate:  0,
-//             onSelect: function (formattedDate) {
-//                 var date1 = $('#checkin_date').datepicker('getDate'); 
-//                 var date = new Date( Date.parse( date1 ) ); 
-//                 date.setDate( date.getDate() + 1 );        
-//                 var newDate = date.toDateString(); 
-//                 newDate = new Date( Date.parse( newDate ) );   
-//                 $('#checkout_date').datepicker("option","minDate",newDate);
-//                 $timeout(function(){
-//                   scope.checkIn = formattedDate;
-//                 });
-//             }
-//         });
-      
-//       $("#check_out_date").datepicker({
-//             dateFormat: 'dd/mm/yy',
-//             minDate:  0,
-//             onSelect: function (formattedDate) {
-//                 var date2 = $('#checkout_date').datepicker('getDate'); 
-//                 $timeout(function(){
-//                   scope.checkOut = formattedDate;
-//                 });
-//             }
-//         });
-      
-//         function ge(){
-//           //...
-//         }
-      
-//         scope.submit = function(){
-//           if (scope.form.$valid && ge()) {
-            
-//           }  
-//         };
-      
-//     }
-// };
-// }]);
-
-
-
-
-
-
-
-
+  
 
