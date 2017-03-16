@@ -31,6 +31,10 @@ angular.module('My_HotelApp').config(
 					controller: "ReserveCtrl",
 					templateUrl: 'partials/reserve.html'
 				})
+				.when('/room/:roomId', {
+					controller: "RoomDetailCtrl",
+					templateUrl: 'partials/roomDetail.html'
+				})
 				
 				.when('/reservation_detail/:reservationId', {
 					controller: "ResDetailCtrl",
