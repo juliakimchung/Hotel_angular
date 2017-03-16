@@ -34,11 +34,11 @@ angular.module('My_HotelApp').config(
 				
 				.when('/reservation_detail/:reservationId', {
 					controller: "ResDetailCtrl",
-					templateUrl: 'partials/reservationDetail.html'
+					templateUrl: 'partials/confirm.html'
 				})
-				.when('/home', {
-					controller: "TestCtrl",
-					templateUrl: 'partials/home.html'
+				.when('/my_reservation', {
+					controller: "ResListCtrl",
+					templateUrl: 'partials/resList.html'
 				})
 				.when('landing', {
 					controller: "LandingCtrl",

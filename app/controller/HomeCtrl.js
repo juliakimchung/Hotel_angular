@@ -2,10 +2,10 @@
 app.controller('HomeCtrl', 
     function($scope){
         $scope.slides = [
-            {image: 'images/blue-hotel.jpg', description: 'Image 00'},
-            {image: 'images/blue-hotel2.jpg', description: 'Image 01'},
-            {image: 'images/blue-hotel3.jpg', description: 'Image 02'},
-            {image: 'images/blue-hotel4.jpg', description: 'Image 03'}
+            {image: 'css/images/blue-hotel.jpg', description: 'Image 00'},
+            {image: 'css/images/blue-hotel2.jpg', description: 'Image 01'},
+            {image: 'css/images/blue-hotel3.jpg', description: 'Image 02'},
+            {image: 'css/images/blue-hotel4.jpg', description: 'Image 03'}
         ];
 
         $scope.direction = 'right';

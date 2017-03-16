@@ -5,23 +5,23 @@ app.controller("ReserveCtrl",
 		$scope.getDates = {
 			check_in_date: "",
 			check_out_date: "",
-			completed: 0,
+			completed: 1,
 			room: "",
 			payment:"",
 			guest: 1,
-			total:""
+			total: ""
 		};
     
 	let oneDay = 86400000;
 
   $scope.getNumberOfDays = ()=> {
     let difference = $scope.getDates.check_out_date - $scope.getDates.check_in_date;
-    return (Math.round(difference/oneDay));
+    return Math.round(difference/oneDay);
   };
 
 
-    RootFactory.getApiRoot()
-		.then((rootes)=>{
+  RootFactory.getApiRoot()
+	.then((rootes)=>{
 				$http({
 					url: `${rootes.room}`,
 					method: 'GET',
@@ -35,7 +35,7 @@ app.controller("ReserveCtrl",
 				});
 			});               
 
-    
+  
 	$scope.payment_type = {
 			name: "",
 			account_number: "",
@@ -63,7 +63,34 @@ app.controller("ReserveCtrl",
 		};
 
 		$scope.addNewReservation =()=>{
+			console.log("$scope.getDates.room: ", $scope.getDates.room);
 			RootFactory.getApiRoot()
+			.then((rootes)=> {
+				$http({
+					url: `${rootes.room}`,
+					method:"GET",
+					headers: {
+						'Authorization': `Token ${RootFactory.getToken()}`
+					}
+
+				})
+				.then((items)=> {
+					$scope.rooms = items.data.results;
+					angular.forEach($scope.rooms, function(value, key){
+							console.log("value from forEach data.results", value );
+							console.log("value.id",value.id );
+							console.log("$scope.getDates.room", $scope.getDates.room);
+							if(value.id == $scope.getDates.room){
+									console.log("Yay", value.id);
+									$scope.getDates.total = value.price * $scope.getNumberOfDays();
+									console.log("$scope.getDates.total", $scope.getDates.total);
+									
+							}
+					});
+				});
+		});
+			
+		RootFactory.getApiRoot()
 			.then((rootes)=>{
 					$http({
 						url:`${rootes.payment_type}`,
@@ -83,7 +110,7 @@ app.controller("ReserveCtrl",
 							data: $scope.getDates,
 							headers: {
 									'Authorization': `Token ${RootFactory.getToken()}`
-								}
+							}
 						})
 						.then((data)=> {
 							console.log("data from addNewReservation", data.data.id );

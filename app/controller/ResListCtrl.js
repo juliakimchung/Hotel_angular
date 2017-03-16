@@ -1,5 +1,5 @@
 "use strict";
-app.controller("TestCtrl", 
+app.controller("ResListCtrl", 
 
 	function($http, RootFactory, $location, $scope, $timeout, $routeParams){
 		$scope.reservations = [];
@@ -16,7 +16,7 @@ app.controller("TestCtrl",
 					}
 				})
 				.then((items)=> {
-					console.log("items from TestCtrl", items );
+					console.log("items from ResListCtrl", items );
 					$scope.reservations = items.data.results;
 					$http({
 						url: `${rootes.room}`,
@@ -26,7 +26,7 @@ app.controller("TestCtrl",
 						}
 					})
 					.then((roomItem) => {
-					console.log("roomItem from TestCtrl", roomItem);
+					console.log("roomItem fromResListCtrl", roomItem);
 
 					$scope.rooms = roomItem.data.results;
 					
