@@ -1,0 +1,77 @@
+<div class="text-center container container-fluid">
+  <div class="head">
+
+
+  <div class="form-group">
+    <h2 class="heading">Check Dates</h2>
+  <fieldset>
+    <div class="grid">
+    <div class="fa-select-date">
+      <div class="controls">
+
+        <input type="date" id="arrive" class="floatLabel"  data-date-format='yy-mm-dd' name="arrive" ng-model='getDates.check_in_date'>
+        <label for="arrive" class="label-date" for=" Arrive">
+        <!-- <i class="fa fa-calendar"></i>&nbsp;&nbsp; --><!-- Arrive --></label>
+      </div>      
+    </div>
+    <div class="fa-select-date">
+      <div class="controls">
+        <input type="date" id="depart" class="floatLabel"  data-date-format='yy-mm-dd' name="depart"  ng-model='getDates.check_out_date'/>
+        <label for="depart" class="label-date"><!-- <i class="fa fa-calendar"></i>&nbsp;&nbsp; --><!-- Depart --></label>
+      </div>      
+    </div>
+    </div>
+ 
+      
+  </fieldset>
+  
+
+ 
+
+    <select ng-model="getDates.room">
+      <option value="((room.id))" ng-repeat="room in rooms">((room.name)) $((room.price))   per night  
+      </option>
+    </select>
+   
+    
+       <a ng-click= "showPayment=true" class="makeAReservation">Make a reservation</a>
+    </div>
+      <div class="mdl-grid " ng-show = "showPayment">
+      <div class="mdl-layout mdl-js-layout payment-background">
+        <main class="mdl-layout__content payment">
+          <div class="mdl-card mdl-shadow--6dp">
+            <div class="mdl-card__title mdl-color--primary mdl-color-text--white">
+              <h2 class="mdl-card__title-text">Payment</h2>
+            </div>
+            <div class="mdl-card__supporting-text">
+              <form action="#" >
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="text" id="payment_name" ng-model='payment_type.name'>
+                  <label class="mdl-textfield__label" for="payment_name">Name</label>
+                </div>
+                
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="account_number" id="account_number" ng-model='payment_type.account_number'>
+                  <label class="mdl-textfield__label" for="account_number">Account Number</label>
+                </div><div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="cvv"  ng-model='payment_type.ccv_number'>
+                  <label class="mdl-textfield__label" for="cvv_number">CCV</label>
+                </div>
+                <div class="mdl-textfield mdl-js-textfield">
+                  <input class="mdl-textfield__input" type="expiration_date"  ng-model='payment_type.expiration_date'>
+                  <label class="mdl-textfield__label" for="expiration_date">Expiration Date</label>
+                </div>
+                
+              </form>
+            </div>
+            <div class="mdl-card__actions mdl-card--border">
+              <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ng-click='addNewReservation()'>Reserve </button>
+            </div>
+          </div>
+        </main>
+</div>
+</div>
+
+
+  
+ 

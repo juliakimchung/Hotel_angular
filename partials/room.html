@@ -1,24 +1,18 @@
-<h1>Hello!</h1>
 <div class="container-fluid">
   <div class="row">
-		<article class="col-xs-6 col-md-4" ng-repeat='room in rooms'>
-		<div>
-			<img class="RoomPic" ng-src='((room.image))'>
-		</div>
-		<div class="RoomDetail">	
-		<strong><p id ="name">((room.name))</p></strong><br>
-		<span>((room.size))</span><br>
-		<span>((room.description))</span><br>
-		<span>((room.amenity))</span><br>
-		<span>((room.price))</span><br>
-		<button class="reserveBtn"><a class="reserveBtn" ng-click="reserve(room.id)">Reserve</a></button>
-
-		</div>
-
-
-
-
-		</article>
+		<article class="col-md-6" ng-repeat='room in rooms'>
 		
-  </div>
+			<img  class="RoomPic" ng-src='((room.image))'>
+		
+		<div class="RoomDetail">	
+			<strong><p id ="name">((room.name))</p></strong><br>
+			<span>Size: ((room.size))</span><br>
+			<span>Desciption:((room.description))</span><br><br>
+			<span>Amenity:((room.amenity))</span><br>
+			<span>Price:((room.price))</span><br>
+			<button class="reserveBtn"><a ng-href= "/#!/reserve/" ng-click="checkRoom()">Check the availability</a></button>
+		</div>
+	</article>
+		
+ </div>
 </div>

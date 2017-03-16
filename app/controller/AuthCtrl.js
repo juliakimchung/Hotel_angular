@@ -5,17 +5,26 @@ app.controller('AuthCtrl', [
 		'$http',
 		'$location',
 		'RootFactory',
+		
 function($scope, $http, $location, RootFactory){
 
 
 	$scope.user = {
 		username: "",
-		password: ""
-	};
+		password: "",
+		email: '',
+		first_name: '',
+		last_name: '',
+		street_address:"",
+		city: '',
+		zipcode: '',
+		state:''
+			};
+
 
 	$scope.register = function(){
 		$http({
-			url: "http://localhost:8000/user/",
+			url: "http://localhost:8000/register/",
 			method: "POST",
 			headers: {
 				"Content-Type": "application/x-www-form-form-unlencoded"
@@ -25,7 +34,11 @@ function($scope, $http, $location, RootFactory){
 				'password': $scope.user.password,
 				'email': $scope.user.email,
 				'first_name': $scope.user.first_name,
-				'last_name': $scope.user.last_name
+				'last_name': $scope.user.last_name,
+				'street_address': $scope.user.street_address,
+				"city": $scope.user.city,
+				"zipcode": $scope.user.zipcode,
+				"state": $scope.user.state
 			}
 		})
 		.then(res => {
@@ -54,6 +67,7 @@ function($scope, $http, $location, RootFactory){
 				}
 			});
 	};
-}
 
+	
+}
 ]);

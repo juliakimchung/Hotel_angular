@@ -1,0 +1,19 @@
+<div class="container-fluid">
+  <div class="row">
+    <div ng-repeat="res in reservations">
+      <div class="panel panel-default">
+        <div class="panel-body">
+        
+          <div class="col-xs-4">Check In Date: ((res.check_in_date))</div>
+          <div class="col-xs-4">Check Out Date: ((res.check_out_date)))</div>
+          <div class="col-xs-4" ng-repeat-start="room in rooms" ng-if = 'res.room == room.id'>Room: ((room.name))</div>
+          <div class="col-xs-4" ng-repeat-end="room in rooms" ng-if = 'res.room == room.id'>Total Price : $((room.price))</div>
+          <a ng-href="#!/room/((room.id))">Room Detail</a>
+
+
+         
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
