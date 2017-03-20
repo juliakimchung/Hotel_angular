@@ -4,17 +4,44 @@ $primary-color: #333;
 
 
 .RoomPic {
-	margin-top: 150px;
 	
-	height: 550px;
-	width: 750px;
+	
+	height: 200px;
+	width: 360px;
 	border-radius: 3px;
+}
+
+#arrive {
+	width:360px;
+	height: 60px;
+	border-radius: 3px;
+	float: right;
+
 	
+}
+#depart {
+	width: 360px;
+	height: 60px;
+	border-radius: 3px;
+	float: right;
 
 }
-.RoomDetail {
-	height:400px;
-	width:700px;
+
+input {
+	color: #167f39;
+	font-size: 22px;
+}
+.roomCard {
+	margin-top: 100px;
+}
+
+.roomSelect {
+	margin-top: 10px;
+	width:360px;
+	height:40px;
+	border-radius: 3px;
+	float: right;
+	color: #167f39;
 }
 
 .login {
@@ -26,7 +53,7 @@ $primary-color: #333;
 }
 
 .payment_form {
-	margin-top: 100px;
+	
 }
 
 .nav {
@@ -36,11 +63,18 @@ $primary-color: #333;
 
 .login {
 	
-	margin: 200px;
+	
 }
 .payment {
 	
-	margin:200px;
+	
+}
+.roomDetail {
+	margin-top: 100px;
+}
+.RoomDetailPic {
+	width: 800px;
+	height:500px;
 }
 
 .selectRoom {
@@ -60,6 +94,5 @@ $primary-color: #333;
 .resList {
 	margin-top: 300px;
 }
-
 
 

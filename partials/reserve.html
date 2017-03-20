@@ -1,42 +1,45 @@
 <div class="text-center container container-fluid">
+  <div class="row">
   <div class="head">
 
 
-  <div class="form-group">
-    <h2 class="heading">Check Dates</h2>
-  <fieldset>
-    <div class="grid">
-    <div class="fa-select-date">
-      <div class="controls">
+    <div class="form-group">
+     <div class="calendar-field">
+      <fieldset>
+        <div class="grid">
+        <div class="fa-select-date">
+         
 
-        <input type="date" id="arrive" class="floatLabel"  data-date-format='yy-mm-dd' name="arrive" ng-model='getDates.check_in_date'>
-        <label for="arrive" class="label-date" for=" Arrive">
-        <!-- <i class="fa fa-calendar"></i>&nbsp;&nbsp; --><!-- Arrive --></label>
-      </div>      
-    </div>
-    <div class="fa-select-date">
-      <div class="controls">
-        <input type="date" id="depart" class="floatLabel"  data-date-format='yy-mm-dd' name="depart"  ng-model='getDates.check_out_date'/>
-        <label for="depart" class="label-date"><!-- <i class="fa fa-calendar"></i>&nbsp;&nbsp; --><!-- Depart --></label>
-      </div>      
-    </div>
-    </div>
+            <input type="date" id="arrive" class="floatLabel "  placeholder="arrive" name="arrive" ng-model='getDates.check_in_date'>
+            
+            
+        </div>
+        <div class="fa-select-date">
+          <div class="controls colorCal">
+            <input type="date" id="depart" class="floatLabel  "   placeholder="Depart" name="depart"  ng-model='getDates.check_out_date'>
+            
+          </div>      
+        </div>
+       </div>
+     </fieldset>
+          
+  </div>
+</div>  
+
  
-      
-  </fieldset>
-  
-
- 
-
-    <select ng-model="getDates.room">
-      <option value="((room.id))" ng-repeat="room in rooms">((room.name)) $((room.price))   per night  
-      </option>
-    </select>
-   
-    
+    <div>
+      <select ng-model="getDates.room" class="roomSelect">
+        <option class="roomSelect" value="((room.id))" ng-repeat="room in rooms">((room.name)) $((room.price))   per night, tax included
+        </option>
+      </select>
+    </div>
+</div>
+    <div>
        <a ng-click= "showPayment=true" class="makeAReservation">Make a reservation</a>
+      </div>
     </div>
-      <div class="mdl-grid " ng-show = "showPayment">
+  </div>
+  <div class="mdl-grid " ng-show = "showPayment">
       <div class="mdl-layout mdl-js-layout payment-background">
         <main class="mdl-layout__content payment">
           <div class="mdl-card mdl-shadow--6dp">
@@ -44,7 +47,11 @@
               <h2 class="mdl-card__title-text">Payment</h2>
             </div>
             <div class="mdl-card__supporting-text">
-              <form action="#" >
+              <!-- <form action="#" > -->
+              <select ng-model="getDates.payment">
+                <option value="((payment.id))" ng-repeat="payment in payment">((payment.name)) $((payment.account_number))   
+               </option>
+              </select>
                 <div class="mdl-textfield mdl-js-textfield">
                   <input class="mdl-textfield__input" type="text" id="payment_name" ng-model='payment_type.name'>
                   <label class="mdl-textfield__label" for="payment_name">Name</label>
@@ -62,7 +69,7 @@
                   <label class="mdl-textfield__label" for="expiration_date">Expiration Date</label>
                 </div>
                 
-              </form>
+             <!--  </form> -->
             </div>
             <div class="mdl-card__actions mdl-card--border">
               <button class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" ng-click='addNewReservation()'>Reserve </button>
