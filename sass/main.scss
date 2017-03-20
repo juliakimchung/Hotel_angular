@@ -58,7 +58,7 @@ input {
 
 .nav {
 	background-color: #00087f;
-	height: 80px;
+	height:80px;
 }
 
 .login {
@@ -86,9 +86,11 @@ input {
 }
 
 .img-responsive {
-	margin: 100px;
-	width: 1000px;
-	height: 150px;
+	margin-top: 30px;
+	margin-bottom: 20px;
+	width: 100%;
+	height: 80%
+	
 }
 
 .resList {
@@ -96,3 +98,13 @@ input {
 }
 
 
+.carousel-indicators {
+	margin-bottom: 80px;
+}
+.carousel-caption {
+	margin-bottom: 60px;
+}
+.footer_nav {
+	background-color: #00087f;
+	height: 80px;
+}
