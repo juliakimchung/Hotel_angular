@@ -7,8 +7,8 @@ $primary-color: #333;
 	
 	
 	height: 200px;
-	width: 360px;
-	border-radius: 3px;
+	width:100%;
+	
 }
 
 #arrive {
@@ -33,8 +33,12 @@ input {
 	font-size: 22px;
 }
 .roomCard {
-	margin-top: 100px;
+	margin-top: 150px;
+	-moz-box-shadow:5px 5px 5px 5px #777777;
+	-webkit-box-shadow: 0 0 10px #777777;
+	box-shadow: 0 0 10px #777777;
 }
+
 
 .roomSelect {
 	margin-left: 10px;
@@ -49,7 +53,7 @@ input {
 }
 
 .login {
-	margin-top: 100px;
+	margin-top: 70px;
 }
 
 .calendar {
@@ -72,25 +76,45 @@ input {
 }
 
 .login {
-	
+	margin-top: 100px;
 	
 }
+
+.register {
+	margin-top: 80px;
+	height: 600px;
+	width: 400px;
+
+}
 .payment {
-	
+	margin-top: 60px;
 	
 }
 .detailRoom {
-	width: 600px;
-	height: 500px;
+	width: 30%;
+	height: 300px;
 	float: right;
-	margin-top: 100px;
+	
+}
+.RoomDetailPicCard {
+	width: 95%;
+	height:75%;
+	margin-left:2.5%;
+	margin-top:150px;
+	-moz-box-shadow:5px 5px 5px 5px #777777;
+	-webkit-box-shadow: 0 0 10px #777777;
+	box-shadow: 0 0 10px #777777;
 	
 }
 .RoomDetailPic {
-	width: 800px;
-	height:500px;
-	margin-top: 100px;
-	
+	width: 65%;
+	height: 500px;
+	border-radius: 3px;
+	border: outset 1px;
+
+
+
+
 }
 
 .selectRoom {
@@ -110,7 +134,7 @@ input {
 }
 
 .resList {
-	margin-top: 300px;
+	margin-top: 100px;
 }
 
 
@@ -124,7 +148,8 @@ input {
 	background-color: #00087f;
 	height: 80px;
 }
-.RoomDetail {
-	margin-top: 100px;
+
+
+body {
 	
 }

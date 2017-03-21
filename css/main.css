@@ -1,7 +1,6 @@
 .RoomPic {
   height: 200px;
-  width: 360px;
-  border-radius: 3px; }
+  width: 100%; }
 
 #arrive {
   width: 360px;
@@ -21,7 +20,10 @@ input {
   font-size: 22px; }
 
 .roomCard {
-  margin-top: 100px; }
+  margin-top: 150px;
+  -moz-box-shadow: 5px 5px 5px 5px #777777;
+  -webkit-box-shadow: 0 0 10px #777777;
+  box-shadow: 0 0 10px #777777; }
 
 .roomSelect {
   margin-left: 10px;
@@ -34,7 +36,7 @@ input {
   border-radius: 3px; }
 
 .login {
-  margin-top: 100px; }
+  margin-top: 70px; }
 
 .calendar {
   margin-top: 100px; }
@@ -48,16 +50,36 @@ input {
   background-color: #00087f;
   height: 80px; }
 
-.detailRoom {
-  width: 600px;
-  height: 500px;
-  float: right;
+.login {
   margin-top: 100px; }
 
+.register {
+  margin-top: 80px;
+  height: 600px;
+  width: 400px; }
+
+.payment {
+  margin-top: 60px; }
+
+.detailRoom {
+  width: 30%;
+  height: 300px;
+  float: right; }
+
+.RoomDetailPicCard {
+  width: 95%;
+  height: 75%;
+  margin-left: 2.5%;
+  margin-top: 150px;
+  -moz-box-shadow: 5px 5px 5px 5px #777777;
+  -webkit-box-shadow: 0 0 10px #777777;
+  box-shadow: 0 0 10px #777777; }
+
 .RoomDetailPic {
-  width: 800px;
+  width: 65%;
   height: 500px;
-  margin-top: 100px; }
+  border-radius: 3px;
+  border: outset 1px; }
 
 .selectRoom {
   margin-top: 120px; }
@@ -72,7 +94,7 @@ input {
   height: 80%; }
 
 .resList {
-  margin-top: 300px; }
+  margin-top: 100px; }
 
 .carousel-indicators {
   margin-bottom: 80px; }
@@ -83,8 +105,5 @@ input {
 .footer_nav {
   background-color: #00087f;
   height: 80px; }
-
-.RoomDetail {
-  margin-top: 100px; }
 
 /*# sourceMappingURL=main.css.map */
