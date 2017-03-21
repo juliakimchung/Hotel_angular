@@ -44,9 +44,9 @@ angular.module('My_HotelApp').config(
 					controller: "ResListCtrl",
 					templateUrl: 'partials/resList.html'
 				})
-				.when('landing', {
+				.when('/', {
 					controller: "LandingCtrl",
-					templateUrl: 'partials/landing.html'
+					templateUrl: 'partials/home.html'
 				});
 
 
