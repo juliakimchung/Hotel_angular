@@ -24,8 +24,11 @@ input {
   margin-top: 100px; }
 
 .roomSelect {
-  margin-left: 10px;
+  width: 358px;
+  height: 58px;
+  border-radius: 3px;
   float: left;
+  margin-left: 10px;
   color: #167f39; }
 
 .roomOption {
