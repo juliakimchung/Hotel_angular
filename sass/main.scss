@@ -15,7 +15,8 @@ $primary-color: #333;
 	width:360px;
 	height: 60px;
 	border-radius: 3px;
-	float: right;
+	float: left;
+	margin-right: 10px;
 
 	
 }
@@ -23,7 +24,7 @@ $primary-color: #333;
 	width: 360px;
 	height: 60px;
 	border-radius: 3px;
-	float: right;
+	float: left;
 
 }
 
@@ -36,12 +37,15 @@ input {
 }
 
 .roomSelect {
-	margin-top: 10px;
-	width:360px;
-	height:40px;
-	border-radius: 3px;
-	float: right;
+	margin-left: 10px;
+	float: left;
 	color: #167f39;
+}
+
+.roomOption {
+	width:360px;
+	height:58px;
+	border-radius: 3px;
 }
 
 .login {
@@ -50,6 +54,12 @@ input {
 
 .calendar {
 	margin-top: 100px;
+}
+.makeAReservation {
+	margin-right: 200px;
+	margin-top:300px;
+	font-size: 22px;
+
 }
 
 .payment_form {
@@ -69,12 +79,18 @@ input {
 	
 	
 }
-.roomDetail {
+.detailRoom {
+	width: 600px;
+	height: 500px;
+	float: right;
 	margin-top: 100px;
+	
 }
 .RoomDetailPic {
 	width: 800px;
 	height:500px;
+	margin-top: 100px;
+	
 }
 
 .selectRoom {
@@ -107,4 +123,8 @@ input {
 .footer_nav {
 	background-color: #00087f;
 	height: 80px;
+}
+.RoomDetail {
+	margin-top: 100px;
+	
 }

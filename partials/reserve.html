@@ -21,25 +21,28 @@
           </div>      
         </div>
        </div>
-     </fieldset>
           
-  </div>
-</div>  
+ 
 
  
-    <div>
-      <select ng-model="getDates.room" class="roomSelect">
+    <div class="roomSelect">
+      <select ng-model="getDates.room" class="roomOption">
         <option class="roomSelect" value="((room.id))" ng-repeat="room in rooms">((room.name)) $((room.price))   per night, tax included
         </option>
       </select>
+   
     </div>
-</div>
-    <div>
-       <a ng-click= "showPayment=true" class="makeAReservation">Make a reservation</a>
-    </div>
-    </div>
+  </fieldset>
   </div>
-  <div class="mdl-grid " ng-show = "showPayment">
+</div>
+</div>
+</div>
+    <div >
+       <a ng-click= "showPayment=true" class="makeAReservation">Make A Reservation</a>
+    </div>
+
+
+<div class="mdl-grid " ng-show = "showPayment">
       <div class="mdl-layout mdl-js-layout payment-background">
         <main class="mdl-layout__content payment">
           <div class="mdl-card mdl-shadow--6dp">
@@ -78,7 +81,7 @@
         </main>
 </div>
 </div>
-
+</div>
 
   
  
