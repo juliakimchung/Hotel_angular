@@ -34,7 +34,8 @@ input {
 .roomOption {
   width: 360px;
   height: 58px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  font-size: 12px; }
 
 .login {
   margin-top: 100px; }
