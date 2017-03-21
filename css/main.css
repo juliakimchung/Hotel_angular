@@ -7,13 +7,14 @@
   width: 360px;
   height: 60px;
   border-radius: 3px;
-  float: right; }
+  float: left;
+  margin-right: 10px; }
 
 #depart {
   width: 360px;
   height: 60px;
   border-radius: 3px;
-  float: right; }
+  float: left; }
 
 input {
   color: #167f39;
@@ -23,12 +24,14 @@ input {
   margin-top: 100px; }
 
 .roomSelect {
-  margin-top: 10px;
-  width: 360px;
-  height: 40px;
-  border-radius: 3px;
-  float: right;
+  margin-left: 10px;
+  float: left;
   color: #167f39; }
+
+.roomOption {
+  width: 360px;
+  height: 58px;
+  border-radius: 3px; }
 
 .login {
   margin-top: 100px; }
@@ -36,16 +39,25 @@ input {
 .calendar {
   margin-top: 100px; }
 
+.makeAReservation {
+  margin-right: 200px;
+  margin-top: 300px;
+  font-size: 22px; }
+
 .nav {
   background-color: #00087f;
   height: 80px; }
 
-.roomDetail {
+.detailRoom {
+  width: 600px;
+  height: 500px;
+  float: right;
   margin-top: 100px; }
 
 .RoomDetailPic {
   width: 800px;
-  height: 500px; }
+  height: 500px;
+  margin-top: 100px; }
 
 .selectRoom {
   margin-top: 120px; }
@@ -54,11 +66,25 @@ input {
   margin-top: 120px; }
 
 .img-responsive {
-  margin: 100px;
-  width: 1000px;
-  height: 150px; }
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 80%; }
 
 .resList {
   margin-top: 300px; }
+
+.carousel-indicators {
+  margin-bottom: 80px; }
+
+.carousel-caption {
+  margin-bottom: 60px; }
+
+.footer_nav {
+  background-color: #00087f;
+  height: 80px; }
+
+.RoomDetail {
+  margin-top: 100px; }
 
 /*# sourceMappingURL=main.css.map */
