@@ -127,7 +127,8 @@ body {
   background: url(images/hotel-pic-back.jpg); }
 
 .login-background {
-  background: url(images/blue-hotel.jpg); }
+  background: url(images/blue-hotel3.jpg);
+  margin-top: 70px; }
 
 li {
   margin: 10px; }
