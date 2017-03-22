@@ -1,6 +1,9 @@
 .RoomPic {
   height: 200px;
-  width: 100%; }
+  width: 100%;
+  -moz-box-shadow: 3px 3px 3px 3px #777777;
+  -webkit-box-shadow: 0 0 7px #777777;
+  box-shadow: 0 0 7px #777777; }
 
 #arrive {
   width: 360px;
@@ -55,7 +58,7 @@ input {
 
 .register {
   margin-top: 80px;
-  height: 600px;
+  height: 400px;
   width: 400px; }
 
 .payment {
@@ -63,7 +66,7 @@ input {
 
 .detailRoom {
   width: 30%;
-  height: 300px;
+  height: 60%;
   float: right; }
 
 .RoomDetailPicCard {
@@ -79,7 +82,12 @@ input {
   width: 65%;
   height: 500px;
   border-radius: 3px;
-  border: outset 1px; }
+  border: outset 5px;
+  padding-left: 0;
+  padding-right: 0;
+  -moz-box-shadow: 5px 5px 5px 5px #777777;
+  -webkit-box-shadow: 0 0 10px #777777;
+  box-shadow: 0 0 10px #777777; }
 
 .selectRoom {
   margin-top: 120px; }
@@ -104,6 +112,36 @@ input {
 
 .footer_nav {
   background-color: #00087f;
-  height: 80px; }
+  height: 60px; }
+
+#name {
+  font-size: 18px;
+  font-style: bold; }
+
+#nameRoom {
+  font-size: 15px;
+  font-style: bold; }
+
+body {
+  background-color: #f2f2f2; }
+
+.confirm-background {
+  background: url(images/hotel-pic-back.jpg); }
+
+li {
+  margin: 10px; }
+
+.navbar-brand {
+  font-size: 20px; }
+
+.footerFont {
+  font-size: 18px; }
+
+.logo {
+  width: 68px;
+  height: 68px;
+  margin-top: -5px;
+  margin-left: -5px;
+  padding: 0px; }
 
 /*# sourceMappingURL=main.css.map */
