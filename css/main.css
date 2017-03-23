@@ -1,6 +1,5 @@
 .RoomPic {
-  height: 200px;
-  width: 100%;
+  margin: auto;
   -moz-box-shadow: 3px 3px 3px 3px #777777;
   -webkit-box-shadow: 0 0 7px #777777;
   box-shadow: 0 0 7px #777777; }
@@ -23,7 +22,8 @@ input {
   font-size: 22px; }
 
 .roomCard {
-  margin-top: 150px;
+  margin-top: 100px;
+  margin-bottom: 100px;
   -moz-box-shadow: 5px 5px 5px 5px #777777;
   -webkit-box-shadow: 0 0 10px #777777;
   box-shadow: 0 0 10px #777777; }
@@ -38,9 +38,6 @@ input {
   height: 58px;
   border-radius: 3px; }
 
-.login {
-  margin-top: 70px; }
-
 .calendar {
   margin-top: 100px; }
 
@@ -48,6 +45,12 @@ input {
   margin-right: 200px;
   margin-top: 300px;
   font-size: 22px; }
+
+.register-background {
+  background: url(images/blue-hotel4.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center; }
 
 .nav {
   background-color: #00087f;
@@ -95,12 +98,15 @@ input {
 .head {
   margin-top: 120px; }
 
-.img-responsive {
-  width: 100%;
-  height: 80%; }
+.imgHome {
+  width: 100vw !important;
+  height: 100vh !important; }
 
 .resList {
   margin-top: 100px; }
+
+.carousel {
+  height: 100vh; }
 
 .carousel-indicators {
   margin-bottom: 80px; }
@@ -124,11 +130,18 @@ body {
   background-color: #f2f2f2; }
 
 .confirm-background {
-  background: url(images/hotel-pic-back.jpg); }
+  background: url(images/hotel-pic-back.jpg);
+  background-size: cover;
+  height: 100vh;
+  background-position: center; }
 
 .login-background {
-  background: url(images/blue-hotel3.jpg);
-  margin-top: 70px; }
+  background: url(images/blue-hotel3.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  background-position: center; }
+  .login-background .container {
+    margin-bottom: 300px; }
 
 li {
   margin: 10px; }
