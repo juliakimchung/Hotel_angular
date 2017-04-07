@@ -1,7 +1,7 @@
 "use strict";
 app.controller("ReserveCtrl", 
 
-	function($http, RootFactory, $location, $scope, $routeParams, $filter,$timeout){
+	function($http, RootFactory, $location, $scope, $routeParams, $window, $filter,$timeout){
 		$scope.getDates = {
 			check_in_date: "",
 			check_out_date: "",
@@ -9,7 +9,7 @@ app.controller("ReserveCtrl",
 			room: "",
 			payment:"",
 			guest: 1,
-			total: ""
+			total: 0
 		};
     
 	let oneDay = 86400000;
@@ -18,16 +18,14 @@ app.controller("ReserveCtrl",
     let difference = $scope.getDates.check_out_date - $scope.getDates.check_in_date;
     return Math.round(difference/oneDay);
   };
-
-
   RootFactory.getApiRoot()
 	.then((rootes)=>{
 				$http({
-					url: `${rootes.room}`,
-					method: 'GET',
-					headers: {
-						'Authorization': `Token ${RootFactory.getToken()}`
-					}
+						url: `${rootes.room}`,
+						method: 'GET',
+						headers: {
+							'Authorization': `Token ${RootFactory.getToken()}`
+						}
 				})
 				.then((items) => {
 					console.log("items from RoomCtrl", items);
@@ -42,8 +40,8 @@ app.controller("ReserveCtrl",
 			ccv_number: "",
 			expiration_date: ""
 		};
-
-		$scope.addNewPaymentType=()=>{
+	$scope.reservations = {}
+	$scope.addNewPaymentType = () => {
 			RootFactory.getApiRoot()
 			.then((rootes)=>{
 					$http({
@@ -60,7 +58,7 @@ app.controller("ReserveCtrl",
 
 					});
 			});
-		};
+	};
 
 		$scope.addNewReservation =()=>{
 			console.log("$scope.getDates.room: ", $scope.getDates.room);
@@ -113,16 +111,19 @@ app.controller("ReserveCtrl",
 							}
 						})
 						.then((data)=> {
-							console.log("data from addNewReservation", data.data.id );
+							console.log("data from addNewReservation", data.data);
+							$scope.reservations = data.data
+							console.log("$scope.reservations from addNewReservation", $scope.reservations);
 							$location.url(`/reservation_detail/${data.data.id}`);
+						})
+						.catch((error)=>{
+							$window.alert('please choose another dates, reservation already exists')
+							
+						});
 						});
 					});
-			});
+			
 		};
-
-
-
-		
 });
   
 
