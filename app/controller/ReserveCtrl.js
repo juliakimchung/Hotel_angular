@@ -114,21 +114,16 @@ app.controller("ReserveCtrl",
 							console.log("data from addNewReservation", data.data);
 							$scope.reservations = data.data
 							console.log("$scope.reservations from addNewReservation", $scope.reservations);
-							if($scope.reservations){
-									$location.url(`/reservation_detail/${data.data.id}`);
-							}
-							else
-									$window.alert('please choose another dates, reservation already exists')
+							$location.url(`/reservation_detail/${data.data.id}`);
+						})
+						.catch((error)=>{
+							$window.alert('please choose another dates, reservation already exists')
+							
+						});
 						});
 					});
-			});
+			
 		};
-
-
-
-
-		
-
 });
   
 
