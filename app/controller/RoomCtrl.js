@@ -1,8 +1,6 @@
 'use strict';
 app.controller("RoomCtrl",
-
-
-	function($http, RootFactory, $location, $scope){
+function($http, RootFactory, $location, $scope){
 		$scope.rooms = [];
 		RootFactory.getApiRoot()
 		.then((rootes)=>{
@@ -18,7 +16,4 @@ app.controller("RoomCtrl",
 					$scope.rooms = items.data.results;
 				});
 			});
-
-	}
-
-);
+});
