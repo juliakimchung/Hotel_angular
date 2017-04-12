@@ -65,9 +65,7 @@ function($scope, $http, $location, RootFactory){
 				if(res.data.token !== ""){
 					$location.path('/room');
 				}
-			});
+		});
 	};
-
-	
 }
 ]);

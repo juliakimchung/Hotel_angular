@@ -1,7 +1,7 @@
 "use strict";
 app.controller("ResDetailCtrl", 
 
-	function($http, RootFactory, $location, $scope, $timeout, $routeParams){
+function($http, RootFactory, $location, $scope, $timeout, $routeParams){
 		$scope.reservations = [];
 		$scope.rooms = [];
 		$scope.payment = [];
@@ -41,10 +41,7 @@ app.controller("ResDetailCtrl",
 						});
 					});
 				});
-
 		});
-
-					
 });
 	
 

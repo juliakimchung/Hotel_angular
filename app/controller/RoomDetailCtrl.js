@@ -17,8 +17,5 @@ app.controller("RoomDetailCtrl",
 					console.log("items from RoomDetailCtrl", items);
 					$scope.room = items.data;
 				});
-			});
-
-	}
-
-);
+		});
+	});

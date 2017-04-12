@@ -18,7 +18,4 @@ app.controller("RoomCtrl",
 					$scope.rooms = items.data.results;
 				});
 			});
-
-	}
-
-);
+	});
