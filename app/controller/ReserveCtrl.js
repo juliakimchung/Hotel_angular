@@ -1,6 +1,5 @@
 "use strict";
 app.controller("ReserveCtrl", 
-
 function($http, RootFactory, $location, $scope, $routeParams, $window, $filter,$timeout){
     $scope.getDates = {
       check_in_date: "",

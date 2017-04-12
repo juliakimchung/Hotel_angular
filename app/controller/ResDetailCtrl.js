@@ -1,6 +1,5 @@
 "use strict";
 app.controller("ResDetailCtrl", 
-
 function($http, RootFactory, $location, $scope, $timeout, $routeParams){
 		$scope.reservations = [];
 		$scope.rooms = [];

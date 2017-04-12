@@ -5,10 +5,8 @@ app.controller('AuthCtrl', [
 		'$http',
 		'$location',
 		'RootFactory',
-		
+
 function($scope, $http, $location, RootFactory){
-
-
 	$scope.user = {
 		username: "",
 		password: "",
@@ -20,8 +18,6 @@ function($scope, $http, $location, RootFactory){
 		zipcode: '',
 		state:''
 			};
-
-
 	$scope.register = function(){
 		$http({
 			url: "http://localhost:8000/register/",

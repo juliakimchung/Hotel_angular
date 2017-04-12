@@ -1,2 +1,13 @@
 This is an app using My_Hotel_API to make a reservation to My Hotel.
-Users can view different suites, check the availability and make a reservation by creatng a payment. Users can view the reservation detail.
+
+
+Users can
+
+
+1. View different suites 
+
+2. Check the availability 
+
+3. Make a reservation by creatng a payment
+
+4. Confirm the reservation detail
