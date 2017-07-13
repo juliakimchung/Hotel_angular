@@ -1,4 +1,5 @@
 "use strict";
+
 app.factory('RootFactory', [
 	"$http",
 	"apiUrl",
